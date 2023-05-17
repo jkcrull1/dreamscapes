@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Dreamscapes Land & Hardscaping</h1>
+
+<p>At Dreamscapes Land & Hardscaping, we bring your outdoor visions to life...</p>
+
+<form action="{{ url_for('contact') }}" method="post">
+  <input type="text" name="name" placeholder="Name" maxlength="25" required>
+  <input type="tel" name="phone" placeholder="Phone Number" maxlength="12" required>
+  <input type="email" name="email" placeholder="Email Address" maxlength="50" required>
+  <textarea name="message" placeholder="Message" maxlength="150" required></textarea>
+  <input type="submit" value="Submit">
+</form>
+{% endblock %}
